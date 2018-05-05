@@ -13,7 +13,7 @@ int isSubstring(string& A, string& B){
   if(temp.find(B) != string::npos){
     return i;
   }
-  temp.append(A);
+  temp += A;
   if(temp.find(B) != string::npos){
     return i + 1;
   }
