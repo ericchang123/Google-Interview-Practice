@@ -21,8 +21,18 @@ int isSubstring(string& A, string& B){
 }
 
 int main(){
-  string A = "abcd";
-  string B = "cdabcdabcdabcdabcdabcdabz";
-  cout << isSubstring(A, B) << endl;
+  string A;
+  string B;
+  cout << "Enter a string A and a string B\n" << endl;
+  // This will see if A can be repeated n times such that B becomes a substring
+  cin >> A >> B;
+  // -1 means B cannot be a substring of any amount of A's
+  // Otherwise, the number printed is how many times A must be repeated such that B is a isSubstring
+  if(isSubstring(A,B) > 0){
+    cout << "Number of A's: " << isSubstring(A,B) << endl;
+  }
+  else{
+    cout << "B cannot be a substring" << endl;
+  }
   return 0;
 }
